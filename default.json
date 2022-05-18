@@ -1,0 +1,42 @@
+{
+	"extends": [
+		":dependencyDashboard",
+		":semanticPrefixFixDepsChoreOthers",
+		":ignoreModulesAndTests",
+		":autodetectPinVersions",
+		":disableRateLimiting",
+		"group:monorepos",
+		"group:recommended",
+		"group:allNonMajor"
+	],
+	"lockFileMaintenance": {
+		"automerge": true,
+		"enabled": true,
+		"semanticCommitScope": "lockfile"
+	},
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["*"],
+			"semanticCommitType": "chore"
+		},
+		{
+			"matchDepTypes": ["dependencies", "require"],
+			"semanticCommitType": "build"
+		},
+		{
+			"automerge": true,
+			"matchDepTypes": ["devDependencies"],
+			"semanticCommitScope": "devDeps",
+			"semanticCommitType": "build"
+		},
+		{
+			"groupName": "actions",
+			"matchPackagePatterns": ["actions"],
+			"semanticCommitType": "ci"
+		}
+	],
+	"pin": {
+		"commitBody": "[skip ci]"
+	},
+	"timezone": "America/New_York"
+}
