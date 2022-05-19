@@ -1,13 +1,6 @@
 {
 	"extends": [
-		":dependencyDashboard",
-		":semanticPrefixFixDepsChoreOthers",
-		":ignoreModulesAndTests",
-		":autodetectPinVersions",
-		":disableRateLimiting",
-		"group:monorepos",
-		"group:recommended",
-		"group:allNonMajor"
+		"config:base",
 	],
 	"lockFileMaintenance": {
 		"automerge": true,
