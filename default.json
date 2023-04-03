@@ -3,7 +3,8 @@
 	"lockFileMaintenance": {
 		"automerge": true,
 		"enabled": true,
-		"semanticCommitScope": "lockfile"
+		"semanticCommitScope": "lockfile",
+		"commitBody": "[skip ci]"
 	},
 	"packageRules": [
 		{
