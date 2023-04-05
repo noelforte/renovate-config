@@ -8,23 +8,23 @@
 	},
 	"packageRules": [
 		{
-			"matchPackagePatterns": ["*"],
-			"semanticCommitType": "chore"
-		},
-		{
 			"matchDepTypes": ["dependencies", "require"],
-			"semanticCommitType": "build"
+			"semanticCommitType": "deps",
+			"semanticCommitScope": "core",
 		},
 		{
-			"automerge": true,
 			"matchDepTypes": ["devDependencies"],
-			"semanticCommitScope": "devDeps",
-			"semanticCommitType": "build"
+			"semanticCommitType": "deps",
+			"semanticCommitScope": "dev",
 		},
 		{
 			"groupName": "actions",
-			"matchPackagePatterns": ["actions"],
+			"matchPackagePatterns": ["*actions*"],
 			"semanticCommitType": "ci"
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"semanticCommitType": "chore"
 		}
 	],
 	"pin": {
