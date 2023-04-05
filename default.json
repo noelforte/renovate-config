@@ -9,6 +9,7 @@
 	],
 	"timezone": "America/New_York",
 	"semanticCommitType": "build",
+	"labels": ["renovate", "dependencies"],
 	"lockFileMaintenance": {
 		"automerge": true,
 		"enabled": true,
@@ -16,6 +17,10 @@
 		"commitBody": "[skip ci]"
 	},
 	"packageRules": [
+		{
+			"matchPackageNames": ["node"],
+			"matchUpdateTypes": ["major"]
+		},
 		{
 			"matchDepTypes": ["dependencies", "require"],
 			"semanticCommitScope": "deps",
