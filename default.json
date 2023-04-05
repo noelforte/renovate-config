@@ -1,5 +1,13 @@
 {
-	"extends": ["config:base", ":disableRateLimiting"],
+	"extends": [
+		"config:base",
+		"group:allNonMajor",
+		":disableRateLimiting",
+		":automergeMinor",
+		":automergeBranch",
+		"schedule:nonOfficeHours"
+	],
+	"semanticCommitType": "build",
 	"lockFileMaintenance": {
 		"automerge": true,
 		"enabled": true,
@@ -9,23 +17,17 @@
 	"packageRules": [
 		{
 			"matchDepTypes": ["dependencies", "require"],
-			"semanticCommitType": "deps",
-			"semanticCommitScope": "core",
+			"semanticCommitScope": "deps",
 		},
 		{
 			"matchDepTypes": ["devDependencies"],
-			"semanticCommitType": "deps",
-			"semanticCommitScope": "dev",
+			"semanticCommitScope": "devDeps",
 		},
 		{
 			"groupName": "actions",
 			"matchPackagePatterns": ["actions"],
 			"semanticCommitType": "ci"
 		},
-		{
-			"matchPackagePatterns": [".+"],
-			"semanticCommitType": "chore"
-		}
 	],
 	"pin": {
 		"commitBody": "[skip ci]"
