@@ -19,8 +19,13 @@
 	"packageRules": [
 		{
 			"matchPackageNames": ["node"],
-			"matchUpdateTypes": ["major"]
+			"matchUpdateTypes": ["major"],
+			"semanticCommitScope": "global"
 		},
+		{
+			"matchPackageNames": ["pnpm"],
+			"semanticCommitScope": "skip-release"
+		}
 		{
 			"matchDepTypes": ["dependencies", "require"],
 			"semanticCommitScope": "deps",
