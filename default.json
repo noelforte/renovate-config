@@ -2,10 +2,10 @@
 	"extends": [
 		"config:base",
 		"group:allNonMajor",
+		"schedule:nonOfficeHours",
 		":disableRateLimiting",
 		":automergeMinor",
-		":automergeBranch",
-		"schedule:nonOfficeHours"
+		":automergeBranch"
 	],
 	"timezone": "America/New_York",
 	"semanticCommitType": "build",
