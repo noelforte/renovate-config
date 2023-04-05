@@ -19,11 +19,11 @@
 		},
 		{
 			"groupName": "actions",
-			"matchPackagePatterns": ["*actions*"],
+			"matchPackagePatterns": ["actions"],
 			"semanticCommitType": "ci"
 		},
 		{
-			"matchPackagePatterns": ["*"],
+			"matchPackagePatterns": [".+"],
 			"semanticCommitType": "chore"
 		}
 	],
