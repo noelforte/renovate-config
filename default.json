@@ -35,9 +35,10 @@
 			"semanticCommitScope": "devDeps",
 		},
 		{
-			"groupName": "actions",
-			"matchPackagePatterns": ["actions"],
-			"semanticCommitType": "ci"
+			"groupName": "GitHub workflow packages",
+			"matchPaths": [".github/**"],
+			"semanticCommitType": "ci",
+			"semanticCommitScope": "skip-release"
 		},
 	],
 	"pin": {
