@@ -1,11 +1,16 @@
 {
 	"extends": [
-		"config:base",
-		"group:allNonMajor",
-		"schedule:nonOfficeHours",
+		":dependencyDashboard",
+		":ignoreModulesAndTests",
 		":disableRateLimiting",
 		":automergeMinor",
 		":automergeBranch"
+		"group:monorepos",
+		"group:recommended",
+		"replacements:all",
+		"workarounds:all"
+		"group:allNonMajor",
+		"schedule:nonOfficeHours",
 	],
 	"timezone": "America/New_York",
 	"semanticCommits": "enabled",
@@ -16,7 +21,6 @@
 	"lockFileMaintenance": {
 		"automerge": true,
 		"enabled": true,
-		"semanticCommitType": "build",
 		"semanticCommitScope": "lockfile",
 		"commitBody": "[skip ci]"
 	},
@@ -35,7 +39,6 @@
 			"matchPackageNames": [
 				"pnpm"
 			],
-			"semanticCommitType": "build",
 			"semanticCommitScope": "skip-release"
 		},
 		{
@@ -43,14 +46,12 @@
 				"dependencies",
 				"require"
 			],
-			"semanticCommitType": "build",
 			"semanticCommitScope": "deps"
 		},
 		{
 			"matchDepTypes": [
 				"devDependencies"
 			],
-			"semanticCommitType": "build",
 			"semanticCommitScope": "devDeps"
 		},
 		{
@@ -60,7 +61,10 @@
 			],
 			"semanticCommitType": "ci",
 			"semanticCommitScope": "skip-release"
-		}
+		},
+		{
+			"matchPackagePatterns": ["*"],
+			"semanticCommitType": "build"
 	],
 	"pin": {
 		"commitBody": "[skip ci]"
