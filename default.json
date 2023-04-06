@@ -4,13 +4,13 @@
 		":ignoreModulesAndTests",
 		":disableRateLimiting",
 		":automergeMinor",
-		":automergeBranch"
+		":automergeBranch",
 		"group:monorepos",
 		"group:recommended",
 		"group:allNonMajor",
 		"replacements:all",
 		"workarounds:all",
-		"schedule:nonOfficeHours",
+		"schedule:nonOfficeHours"
 	],
 	"timezone": "America/New_York",
 	"semanticCommits": "enabled",
@@ -63,10 +63,13 @@
 			"semanticCommitScope": "skip-release"
 		},
 		{
-			"matchPackagePatterns": ["*"],
-			"semanticCommitType": "build"
-	],
-	"pin": {
-		"commitBody": "[skip ci]"
-	}
+			"matchPackagePatterns": [
+				"*"
+			],
+			"semanticCommitType": "build",
+			"pin": {
+				"commitBody": "[skip ci]"
+			}
+		}
+	]
 }
