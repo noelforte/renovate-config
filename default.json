@@ -7,9 +7,9 @@
 		":automergeBranch"
 		"group:monorepos",
 		"group:recommended",
-		"replacements:all",
-		"workarounds:all"
 		"group:allNonMajor",
+		"replacements:all",
+		"workarounds:all",
 		"schedule:nonOfficeHours",
 	],
 	"timezone": "America/New_York",
