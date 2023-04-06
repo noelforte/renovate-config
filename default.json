@@ -9,7 +9,6 @@
 	],
 	"timezone": "America/New_York",
 	"semanticCommits": "enabled",
-	"semanticCommitType": "build",
 	"labels": [
 		"renovate",
 		"dependencies"
@@ -17,6 +16,7 @@
 	"lockFileMaintenance": {
 		"automerge": true,
 		"enabled": true,
+		"semanticCommitType": "build",
 		"semanticCommitScope": "lockfile",
 		"commitBody": "[skip ci]"
 	},
@@ -28,12 +28,14 @@
 			"matchUpdateTypes": [
 				"major"
 			],
+			"semanticCommitType": "build",
 			"semanticCommitScope": "global"
 		},
 		{
 			"matchPackageNames": [
 				"pnpm"
 			],
+			"semanticCommitType": "build",
 			"semanticCommitScope": "skip-release"
 		},
 		{
@@ -41,12 +43,14 @@
 				"dependencies",
 				"require"
 			],
+			"semanticCommitType": "build",
 			"semanticCommitScope": "deps"
 		},
 		{
 			"matchDepTypes": [
 				"devDependencies"
 			],
+			"semanticCommitType": "build",
 			"semanticCommitScope": "devDeps"
 		},
 		{
