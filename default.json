@@ -8,6 +8,7 @@
 		":automergeBranch"
 	],
 	"timezone": "America/New_York",
+	"semanticCommits": "enabled",
 	"semanticCommitType": "build",
 	"labels": [
 		"renovate",
