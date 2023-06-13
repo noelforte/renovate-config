@@ -4,7 +4,7 @@
 		":ignoreModulesAndTests",
 		":disableRateLimiting",
 		":automergeMinor",
-		":automergeBranch",
+		":automergePr",
 		"group:monorepos",
 		"group:recommended",
 		"group:allNonMajor",
@@ -14,10 +14,7 @@
 	],
 	"timezone": "America/New_York",
 	"semanticCommits": "enabled",
-	"labels": [
-		"renovate",
-		"dependencies"
-	],
+	"labels": ["renovate", "dependencies"],
 	"lockFileMaintenance": {
 		"automerge": true,
 		"enabled": true,
@@ -26,46 +23,31 @@
 	},
 	"packageRules": [
 		{
-			"matchPackageNames": [
-				"node"
-			],
-			"matchUpdateTypes": [
-				"major"
-			],
+			"matchPackageNames": ["node"],
+			"matchUpdateTypes": ["major"],
 			"semanticCommitType": "build",
 			"semanticCommitScope": "global"
 		},
 		{
-			"matchPackageNames": [
-				"pnpm"
-			],
+			"matchPackageNames": ["pnpm"],
 			"semanticCommitScope": "skip-release"
 		},
 		{
-			"matchDepTypes": [
-				"dependencies",
-				"require"
-			],
+			"matchDepTypes": ["dependencies", "require"],
 			"semanticCommitScope": "deps"
 		},
 		{
-			"matchDepTypes": [
-				"devDependencies"
-			],
+			"matchDepTypes": ["devDependencies"],
 			"semanticCommitScope": "devDeps"
 		},
 		{
 			"groupName": "GitHub workflow packages",
-			"matchPaths": [
-				".github/**"
-			],
+			"matchPaths": [".github/**"],
 			"semanticCommitType": "ci",
 			"semanticCommitScope": "skip-release"
 		},
 		{
-			"matchPackagePatterns": [
-				"*"
-			],
+			"matchPackagePatterns": ["*"],
 			"semanticCommitType": "build",
 			"pin": {
 				"commitBody": "[skip ci]"
