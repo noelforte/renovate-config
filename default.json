@@ -24,11 +24,6 @@
 	"timezone": "America/New_York",
 	"packageRules": [
 		{
-			"matchPackageNames": ["node"],
-			"matchUpdateTypes": ["major"],
-			"semanticCommitScope": "global"
-		},
-		{
 			"matchDepTypes": ["dependencies", "require"],
 			"semanticCommitScope": "deps"
 		},
