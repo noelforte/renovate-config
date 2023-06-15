@@ -19,11 +19,12 @@
 		"semanticCommitScope": "lockfile"
 	},
 	"semanticCommits": "enabled",
-	"semanticCommitType": "ci",
+	"semanticCommitType": "chore",
 	"timezone": "America/New_York",
 	"packageRules": [
 		{
 			"matchDepTypes": ["dependencies", "require"],
+			"semanticCommitType": "chore",
 			"semanticCommitScope": "deps"
 		},
 		{
@@ -31,9 +32,9 @@
 			"semanticCommitScope": "devDeps"
 		},
 		{
-			"groupName": "GitHub workflow packages",
 			"matchPaths": [".github/**"],
-			"semanticCommitScope": "actions"
+			"semanticCommitType": "ci",
+			"groupName": "GitHub workflow packages"
 		},
 		{
 			"matchPackagePatterns": ["*"],
