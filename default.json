@@ -1,7 +1,7 @@
 {
 	"extends": [
-		":automergeMinor",
 		":automergeBranch",
+		":automergeMinor",
 		":dependencyDashboard",
 		":disableRateLimiting",
 		":ignoreModulesAndTests",
@@ -18,7 +18,7 @@
 		"enabled": true,
 		"semanticCommitScope": "lockfile"
 	},
-	"semanticCommits": "enabled",
+	"semanticCommits": "disabled",
 	"semanticCommitType": "chore",
 	"timezone": "America/New_York",
 	"packageRules": [
