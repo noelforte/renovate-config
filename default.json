@@ -14,7 +14,6 @@
 	"labels": ["renovate", "dependencies"],
 	"lockFileMaintenance": {
 		"automerge": true,
-		"commitBody": "[skip ci]",
 		"enabled": true,
 		"semanticCommitScope": "lockfile"
 	},
