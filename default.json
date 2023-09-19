@@ -4,6 +4,7 @@
 		":automergeMinor",
 		":dependencyDashboard",
 		":disableRateLimiting",
+		":pinVersions",
 		":ignoreModulesAndTests",
 		"group:monorepos",
 		"group:recommended",
@@ -11,34 +12,28 @@
 		"schedule:nonOfficeHours",
 		"workarounds:all"
 	],
-	"labels": ["renovate", "dependencies"],
-	"lockFileMaintenance": {
-		"automerge": true,
-		"enabled": true,
-		"semanticCommitScope": "lockfile"
+	"pin": {
+		"ignoreTests": true,
+		"commitBody": "[skip ci]"
 	},
-	"semanticCommitType": "chore",
+	"labels": ["renovate", "dependencies"],
+
 	"timezone": "America/New_York",
 	"packageRules": [
 		{
-			"matchDepTypes": ["dependencies", "require"],
+			"matchPackagePatterns": ["*"],
 			"semanticCommitType": "chore",
 			"semanticCommitScope": "deps"
 		},
 		{
-			"matchDepTypes": ["devDependencies"],
-			"semanticCommitScope": "devDeps"
+			"matchDepTypes": ["dependencies", "require"],
+			"semanticCommitType": "fix",
+			"semanticCommitScope": "deps"
 		},
 		{
-			"matchPaths": [".github/**"],
-			"semanticCommitType": "ci",
-			"groupName": "GitHub workflow packages"
-		},
-		{
-			"matchPackagePatterns": ["*"],
-			"pin": {
-				"commitBody": "[skip ci]"
-			}
+			"matchFileNames": [".github/**"],
+			"semanticCommitScope": "ci",
+			"groupName": "GitHub workflow updates"
 		}
 	]
 }
