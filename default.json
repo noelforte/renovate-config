@@ -17,7 +17,6 @@
 		"commitBody": "[skip ci]"
 	},
 	"labels": ["renovate", "dependencies"],
-
 	"timezone": "America/New_York",
 	"packageRules": [
 		{
