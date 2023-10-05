@@ -4,9 +4,8 @@
 		":automergeMinor",
 		":dependencyDashboard",
 		":disableRateLimiting",
-		":ignoreModulesAndTests",
 		":pinVersions",
-		":semanticCommitsDisabled",
+		":ignoreModulesAndTests",
 		"group:monorepos",
 		"group:recommended",
 		"replacements:all",
@@ -21,7 +20,16 @@
 	"timezone": "America/New_York",
 	"packageRules": [
 		{
+			"matchPackagePatterns": ["*"],
+			"semanticCommitType": "chore"
+		},
+		{
+			"matchDepTypes": ["dependencies", "require", "devDependencies"],
+			"semanticCommitScope": "devDeps"
+		},
+		{
 			"matchFileNames": [".github/**"],
+			"semanticCommitScope": "ci",
 			"groupName": "GitHub workflow updates"
 		}
 	]
