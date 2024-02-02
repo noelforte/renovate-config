@@ -4,6 +4,7 @@
 		":automergeMinor",
 		":dependencyDashboard",
 		":disableRateLimiting",
+		"semanticCommitsDisabled",
 		":pinVersions",
 		":ignoreModulesAndTests",
 		"group:monorepos",
@@ -20,16 +21,11 @@
 	"schedule": ["before 8am"],
 	"packageRules": [
 		{
-			"matchPackagePatterns": ["*"],
-			"semanticCommitType": "chore"
-		},
-		{
-			"matchDepTypes": ["dependencies", "require", "devDependencies"],
-			"semanticCommitScope": "devDeps"
+			"matchDepTypes": ["devDependencies"],
+			"groupName": "Development Dependencies"
 		},
 		{
 			"matchFileNames": [".github/**"],
-			"semanticCommitScope": "ci",
 			"groupName": "GitHub workflow updates"
 		}
 	]
