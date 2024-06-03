@@ -2,7 +2,6 @@
 	"extends": [
 		":automergeBranch",
 		":automergeMinor",
-		":dependencyDashboard",
 		":disableRateLimiting",
 		":pinVersions",
 		":ignoreModulesAndTests",
@@ -11,6 +10,7 @@
 		"replacements:all",
 		"workarounds:all"
 	],
+	"dependencyDashboard": true,
 	"pin": {
 		"ignoreTests": true,
 		"commitBody": "[skip ci]"
