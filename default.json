@@ -3,7 +3,6 @@
 		":automergeBranch",
 		":automergeMinor",
 		":disableRateLimiting",
-		":pinVersions",
 		":ignoreModulesAndTests",
 		"group:monorepos",
 		"group:recommended",
