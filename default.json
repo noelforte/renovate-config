@@ -4,6 +4,7 @@
 		":automergeMinor",
 		":disableRateLimiting",
 		":ignoreModulesAndTests",
+		":maintainLockFilesWeekly",
 		"group:monorepos",
 		"group:recommended",
 		"replacements:all",
