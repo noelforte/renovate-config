@@ -10,10 +10,6 @@
 		"workarounds:all"
 	],
 	"dependencyDashboard": true,
-	"pin": {
-		"ignoreTests": true,
-		"commitBody": "[skip ci]"
-	},
 	"labels": ["renovate", "dependencies"],
 	"timezone": "America/New_York",
 	"schedule": ["before 8am"],
