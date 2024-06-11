@@ -2,6 +2,7 @@
 	"extends": [
 		":disableRateLimiting",
 		":ignoreModulesAndTests",
+		":pinAllExceptPeerDependencies",
 		"group:monorepos",
 		"group:recommended",
 		"replacements:all",
@@ -9,7 +10,6 @@
 	],
 	"timezone": "America/New_York",
 	"schedule": ["before 8am"],
-	"rangeStrategy": "pin",
 	"dependencyDashboard": true,
 	"labels": ["renovate", "dependencies"],
 	"automergeType": "branch",
