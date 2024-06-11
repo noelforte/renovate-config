@@ -1,19 +1,32 @@
 {
 	"extends": [
-		":automergeBranch",
-		":automergeMinor",
 		":disableRateLimiting",
 		":ignoreModulesAndTests",
-		":maintainLockFilesWeekly",
 		"group:monorepos",
 		"group:recommended",
 		"replacements:all",
 		"workarounds:all"
 	],
-	"dependencyDashboard": true,
-	"labels": ["renovate", "dependencies"],
 	"timezone": "America/New_York",
 	"schedule": ["before 8am"],
+	"rangeStrategy": "pin",
+	"dependencyDashboard": true,
+	"labels": ["renovate", "dependencies"],
+	"automergeType": "branch",
+	"lockFileMaintenance": {
+		"enabled": true,
+		"schedule": ["before 4am on monday"],
+		"automerge": true
+	},
+	"minor": {
+		"automerge": true
+	},
+	"patch": {
+		"automerge": true
+	},
+	"pin": {
+		"automerge": true
+	},
 	"packageRules": [
 		{
 			"matchDepTypes": ["devDependencies"],
