@@ -12,6 +12,7 @@
 	"schedule": ["before 8am"],
 	"dependencyDashboard": true,
 	"labels": ["renovate", "dependencies"],
+	"automergeType": "branch",
 	"lockFileMaintenance": {
 		"enabled": true,
 		"schedule": ["before 4am on monday"],
