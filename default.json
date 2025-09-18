@@ -8,15 +8,19 @@
 		"replacements:all",
 		"workarounds:all"
 	],
-	"timezone": "America/New_York",
-	"schedule": ["before 8am"],
 	"dependencyDashboard": true,
 	"labels": ["renovate", "dependencies"],
+	"timezone": "America/New_York",
+	"schedule": ["before 8am"],
 	"automergeType": "branch",
+	"minimumReleaseAge": "3 days",
 	"lockFileMaintenance": {
 		"enabled": true,
 		"schedule": ["before 4am on monday"],
 		"automerge": true
+	},
+	"major": {
+		"automergeType": "pr"
 	},
 	"minor": {
 		"automerge": true
@@ -27,7 +31,6 @@
 	"pin": {
 		"automerge": true
 	},
-	"minimumReleaseAge": "3 days",
 	"packageRules": [
 		{
 			"matchDepTypes": ["devDependencies"],
