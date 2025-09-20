@@ -13,6 +13,7 @@
 	"timezone": "America/New_York",
 	"schedule": ["before 8am"],
 	"automergeType": "branch",
+	"internalChecksFilter": "strict",
 	"minimumReleaseAge": "3 days",
 	"lockFileMaintenance": {
 		"enabled": true,
