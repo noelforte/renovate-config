@@ -15,10 +15,12 @@
 	"automergeType": "branch",
 	"internalChecksFilter": "strict",
 	"minimumReleaseAge": "3 days",
+	"minimumReleaseAgeBehaviour": "timestamp-required",
 	"lockFileMaintenance": {
 		"enabled": true,
 		"schedule": ["before 4am on monday"],
-		"automerge": true
+		"automerge": true,
+		"minimumReleaseAge": null
 	},
 	"major": {
 		"automergeType": "pr"
