@@ -23,7 +23,8 @@
 		"minimumReleaseAge": null
 	},
 	"major": {
-		"automergeType": "pr"
+		"automergeType": "pr",
+		"assignees": ["noelforte"]
 	},
 	"minor": {
 		"automerge": true
