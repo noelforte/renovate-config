@@ -5,6 +5,7 @@
 		":pinAllExceptPeerDependencies",
 		"group:monorepos",
 		"group:recommended",
+		"group:nonMajorDevelopmentDependencies",
 		"replacements:all",
 		"workarounds:all"
 	],
@@ -38,6 +39,7 @@
 	"packageRules": [
 		{
 			"matchDepTypes": ["devDependencies"],
+			"matchUpdateTypes": ["minor", "patch"],
 			"groupName": "Development Dependencies"
 		},
 		{
