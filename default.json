@@ -5,7 +5,6 @@
 		":pinAllExceptPeerDependencies",
 		"group:monorepos",
 		"group:recommended",
-		"group:nonMajorDevelopmentDependencies",
 		"replacements:all",
 		"workarounds:all"
 	],
