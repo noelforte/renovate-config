@@ -37,11 +37,6 @@
 	},
 	"packageRules": [
 		{
-			"matchDepTypes": ["devDependencies"],
-			"matchUpdateTypes": ["minor", "patch"],
-			"groupName": "Development Dependencies"
-		},
-		{
 			"matchFileNames": [".github/**"],
 			"groupName": "GitHub workflow updates"
 		}
