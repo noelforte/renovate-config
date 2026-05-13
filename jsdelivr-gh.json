@@ -1,0 +1,25 @@
+{
+	"customManagers": [
+		// Select jsdelivr versions from github releases in deno.json files
+		{
+			"customType": "jsonata",
+			"fileFormat": "json",
+			"managerFilePatterns": ["deno.json"],
+			"matchStrings": [
+				"$each(imports,/:\\/\\/cdn.jsdelivr.net\\/gh\\/([^@]+)@([\\d.]+)/).{'depName':groups[0],'currentValue':groups[1]}"
+			],
+			"datasourceTemplate": "github-releases",
+			"versioningTemplate": "semver"
+		},
+		// Also select jsdelivr versions with github releases in deps .ts/.js files
+		{
+			"customType": "regex",
+			"managerFilePatterns": ["deps.ts", "deps.js"],
+			"matchStrings": [
+				":\\/\\/cdn\\.jsdelivr\\.net\\/gh\\/(?<depName>.*?)@(?<currentValue>[\\d\\.]+)"
+			],
+			"datasourceTemplate": "github-releases",
+			"versioningTemplate": "semver"
+		}
+	]
+}
