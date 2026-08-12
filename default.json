@@ -17,6 +17,7 @@
 	"internalChecksFilter": "strict",
 	"minimumReleaseAge": "3 days",
 	"minimumReleaseAgeBehaviour": "timestamp-required",
+	"gitIgnoredAuthors": ["github-actions[bot]"],
 	"lockFileMaintenance": {
 		"enabled": true,
 		"schedule": ["before 4am on monday"],
