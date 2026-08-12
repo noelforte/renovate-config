@@ -8,7 +8,7 @@
 			"fileFormat": "json",
 			"managerFilePatterns": ["deno.json", "deno.jsonc"],
 			"matchStrings": [
-				"$each(imports,/:\/\/(cdn\\.jsdelivr\\.net)\/gh\/([^@]+)@([\\d.]+)/).{'depName':groups[1],'currentValue':groups[2]}"
+				"$each(imports,/:\\/\\/(cdn\\.jsdelivr\\.net)\\/gh\\/([^@]+)@([\\d.]+)/).{'depName':groups[1],'currentValue':groups[2]}"
 			],
 			"datasourceTemplate": "github-releases",
 			"versioningTemplate": "semver"
