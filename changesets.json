@@ -1,0 +1,8 @@
+{
+	"packageRules": [
+		{
+			"matchDepNames": ["@changesets/*", "changesets/action"],
+			"groupName": "Changesets"
+		}
+	]
+}
