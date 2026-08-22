@@ -1,6 +1,7 @@
 // Managers to upgrade JS HTTP imports in deno configuration files or deps.ts/js files
 // Defines patterns for jsDelivr and esm.sh
 {
+	"gitIgnoredAuthors": ["github-actions[bot]"],
 	"customManagers": [
 		// Select jsdelivr and esm.sh versions from github releases in deno.json files
 		{

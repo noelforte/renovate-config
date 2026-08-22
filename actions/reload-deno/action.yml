@@ -1,0 +1,25 @@
+name: Reload deno
+description:
+  Composite action that reloads deno.json dependencies and pushes changes.
+  Intended for use post-Renovate commits.
+runs:
+  using: composite
+  steps:
+    - name: Reload deno.lock
+      run: |
+        rm deno.lock
+        deno install --reload
+      shell: bash
+
+    - name: Configure git
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      shell: bash
+
+    - name: Commit and push
+      run: |
+        git add -A
+        git commit -m "Refresh deno.lock"
+        git push
+      shell: bash
