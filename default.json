@@ -40,7 +40,7 @@
 	"packageRules": [
 		{
 			"matchFileNames": [".github/**"],
-			"groupName": "GitHub workflow updates"
+			"groupName": "GitHub workflows"
 		}
 	]
 }
